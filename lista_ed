@@ -95,6 +95,7 @@ public class LDE {
 			size--;
 			
 	}
+	
 
 	public boolean isEmpty() {
 		return size == 0;
@@ -111,6 +112,12 @@ public class LDE {
 		}
 
 		return false;
+	}
+	
+	public boolean search(int x, Node node){
+		if(node.value == x) return true;
+		else if(node.value > x) return search(x,node.next);
+		else return false;
 	}
 
 	@Override
